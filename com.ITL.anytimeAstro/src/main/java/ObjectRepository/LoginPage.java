@@ -28,8 +28,8 @@ public class LoginPage extends WebDriverUtility {
 	 @FindBy(id="login")
 	 private WebElement loginbtn;
 	 
-	 @FindBy(id="bell")
-	 private WebElement bellicon;
+	
+	
 
 	public WebElement getSigninlink() {
 		return signinlink;
@@ -51,14 +51,18 @@ public class LoginPage extends WebDriverUtility {
 		return loginbtn;
 	}
 
-	public WebElement getBellicon() {
-		return bellicon;
-	}
-	 
+
+	 public void signin() {
+		 signinlink.click();
+	 }
 	
-	public void login(String username, String password, WebDriver driver) {
-		signinlink.click();
-		alertSwitch(driver);
+	 public void loginEmail() throws InterruptedException
+	 {
+		 Thread.sleep(2000);
+			loginViaEmail.click();
+	 }
+	public void login(String username, String password, WebDriver driver) {	
+	
 		emailtxt.sendKeys(username);
 		passwordtxt.sendKeys(password);
 		loginbtn.click();

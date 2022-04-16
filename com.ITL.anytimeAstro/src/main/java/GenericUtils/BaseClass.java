@@ -21,6 +21,7 @@ public class BaseClass {
 	public PropertyFileUtility pLib = new PropertyFileUtility();
 	public ExcelUtility eLib = new ExcelUtility();
 	public HomePage homepage;
+	public LoginPage loginpage;
 	public static WebDriver sdriver;
 	public static Logger logger;
 	 
@@ -65,6 +66,8 @@ public class BaseClass {
 		
 		//Login to Application
 		LoginPage loginpage = new LoginPage(driver);
+		loginpage.signin();
+		loginpage.loginEmail();
 		loginpage.login(USERNAME, PASSWORD, driver);
 	}
 

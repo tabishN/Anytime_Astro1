@@ -6,6 +6,7 @@ import GenericUtils.BaseClass;
 import GenericUtils.PropertyFileUtility;
 import GenericUtils.WebDriverUtility;
 import ObjectRepository.HomePage;
+import ObjectRepository.LoginPage;
 
 public class sample1 extends BaseClass{
 
@@ -22,8 +23,11 @@ public class sample1 extends BaseClass{
 				// navigate to employee management
 				homepage=new HomePage(driver);
 				homepage.menuDropDown();
+				Thread.sleep(2000);
 				homepage.logoutButton();
+				System.out.println("ok............done");
 				
+		
 				
 				
 				
