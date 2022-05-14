@@ -51,7 +51,7 @@
               <ul>
                 <li>
                   <a href="#" panel-name="test-xml-Default_suite" class="navigator-link ">
-                    <span>C:\Users\tabish\AppData\Local\Temp\testng-eclipse-461163070\testng-customsuite.xml</span>
+                    <span>C:\Users\tabish\AppData\Local\Temp\testng-eclipse-1562956927\testng-customsuite.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -104,7 +104,7 @@
                     <div class="method-list-content passed suite-Default_suite">
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="test.sample1" class="method navigator-link" hash-for-method="astroLogin">astroLogin</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Default_suite" title="test.LoginWithEmail" class="method navigator-link" hash-for-method="astroEmailLogin">astroEmailLogin</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Default_suite -->
@@ -122,14 +122,14 @@
           <div class="suite-Default_suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
-              <span class="class-name">test.sample1</span>
+              <span class="class-name">test.LoginWithEmail</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="astroLogin">
-                  </a> <!-- astroLogin -->
-                  <span class="method-name">astroLogin</span>
+                  <a name="astroEmailLogin">
+                  </a> <!-- astroEmailLogin -->
+                  <span class="method-name">astroEmailLogin</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -137,7 +137,7 @@
         </div> <!-- panel Default_suite -->
         <div panel-name="test-xml-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\tabish\AppData\Local\Temp\testng-eclipse-461163070\testng-customsuite.xml</span>
+            <span class="header-content">C:\Users\tabish\AppData\Local\Temp\testng-eclipse-1562956927\testng-customsuite.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -146,11 +146,11 @@
 &lt;suite name=&quot;Default suite&quot; guice-stage=&quot;DEVELOPMENT&quot;&gt;
   &lt;test thread-count=&quot;5&quot; name=&quot;Default test&quot; verbose=&quot;2&quot;&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;test.sample1&quot;&gt;
+      &lt;class name=&quot;test.LoginWithEmail&quot;&gt;
         &lt;methods&gt;
-          &lt;include name=&quot;astroLogin&quot;/&gt;
+          &lt;include name=&quot;astroEmailLogin&quot;/&gt;
         &lt;/methods&gt;
-      &lt;/class&gt; &lt;!-- test.sample1 --&gt;
+      &lt;/class&gt; &lt;!-- test.LoginWithEmail --&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Default test --&gt;
 &lt;/suite&gt; &lt;!-- Default suite --&gt;
@@ -178,7 +178,7 @@
               <span class="test-group-name">regressiontest</span>
               <br/>
               <div class="method-in-group">
-                <span class="method-in-group-name">astroLogin</span>
+                <span class="method-in-group-name">astroEmailLogin</span>
                 <br/>
               </div> <!-- method-in-group -->
             </div> <!-- test-group -->
@@ -200,14 +200,14 @@ data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
 data.addRows(1);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'astroLogin')
-data.setCell(0, 2, 'test.sample1')
-data.setCell(0, 3, 9290);
+data.setCell(0, 1, 'astroEmailLogin')
+data.setCell(0, 2, 'test.LoginWithEmail')
+data.setCell(0, 3, 871);
 window.suiteTableData['Default_suite']= { tableData: data, tableDiv: 'times-div-Default_suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 9 seconds</span>
+              <span class="suite-total-time">Total running time: 871 ms</span>
               <div id="times-div-Default_suite">
               </div> <!-- times-div-Default_suite -->
             </div> <!-- times-div -->
@@ -233,36 +233,36 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">test.sample1</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">test.LoginWithEmail</div> <!-- chronological-class-name -->
               <div class="configuration-suite before">
                 <span class="method-name">configBS</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-suite before -->
               <div class="configuration-class before">
                 <span class="method-name">configBC</span>
-                <span class="method-start">22 ms</span>
+                <span class="method-start">28 ms</span>
               </div> <!-- configuration-class before -->
               <div class="configuration-method before">
                 <span class="method-name">setUp</span>
-                <span class="method-start">2013 ms</span>
+                <span class="method-start">2659 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
-                <span class="method-name">astroLogin</span>
-                <span class="method-start">10251 ms</span>
+                <span class="method-name">astroEmailLogin</span>
+                <span class="method-start">16887 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <img src="failed.png">
                 </img>
                 <span class="method-name">tearDown</span>
-                <span class="method-start">19544 ms</span>
+                <span class="method-start">17761 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-class after">
                 <span class="method-name">configAC</span>
-                <span class="method-start">19590 ms</span>
+                <span class="method-start">37789 ms</span>
               </div> <!-- configuration-class after -->
               <div class="configuration-suite after">
                 <span class="method-name">configAS</span>
-                <span class="method-start">19771 ms</span>
+                <span class="method-start">37891 ms</span>
               </div> <!-- configuration-suite after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

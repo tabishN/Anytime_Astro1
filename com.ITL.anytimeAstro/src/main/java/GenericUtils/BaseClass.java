@@ -57,22 +57,18 @@ public class BaseClass {
 		
 		String URL = pLib.readDataFromPropertyFile("url");
 		//logger.info("URL is opened");
-		String USERNAME = pLib.readDataFromPropertyFile("username");
-		//logger.info("Entered username");
-		String PASSWORD = pLib.readDataFromPropertyFile("password");
-		//logger.info("Entered password");
 		driver.get(URL);
-		
 		
 		//Login to Application
 		LoginPage loginpage = new LoginPage(driver);
 		loginpage.signin();
-		loginpage.loginEmail();
-		loginpage.login(USERNAME, PASSWORD, driver);
+		
 	}
 
 	@AfterMethod(groups= {"smokeTest","regressionTest"})
-	public void tearDown() {
+	public void tearDown() throws Throwable {
+		HomePage homepage =new HomePage(driver);
+		homepage.menuDropDown(driver);
 		homepage.logoutButton();
 	}
 	

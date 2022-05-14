@@ -28,8 +28,22 @@ public class LoginPage extends WebDriverUtility {
 	 @FindBy(id="login")
 	 private WebElement loginbtn;
 	 
+	 @FindBy(id="ContactMobile")
+	 private WebElement loginViaMobile;
+	 
+	 @FindBy(id="getOtp")
+	 private WebElement getotpbutton;
+	 
 	
 	
+
+	public WebElement getLoginViaotp() {
+		return loginViaMobile;
+	}
+
+	public WebElement getGetotpbutton() {
+		return getotpbutton;
+	}
 
 	public WebElement getSigninlink() {
 		return signinlink;
@@ -56,16 +70,21 @@ public class LoginPage extends WebDriverUtility {
 		 signinlink.click();
 	 }
 	
-	 public void loginEmail() throws InterruptedException
+	 public void loginEmail(WebDriver driver) throws InterruptedException
 	 {
-		 Thread.sleep(2000);
+		 waitForElementToBeClickable(loginViaEmail, driver);
 			loginViaEmail.click();
 	 }
-	public void login(String username, String password, WebDriver driver) {	
+	public void login(String username, String password) {	
 	
 		emailtxt.sendKeys(username);
 		passwordtxt.sendKeys(password);
 		loginbtn.click();
+	}
+	public void loginWithOtp(String mobilenumber) {
+		loginViaMobile.sendKeys(mobilenumber);
+		getotpbutton.click();
+		
 	}
 	
 	 
