@@ -17,7 +17,7 @@ public class HomePage extends WebDriverUtility {
 	@FindBy(xpath="//a[@onclick=\"funlogout()\"]")
 	private WebElement logoutbtn;
 	
-	@FindBy(id="chatPg")
+	@FindBy(xpath="//a[@class=\"btn btn-chat\" and text()=' Chat With Astrologer']")
 	private WebElement chatbutton;
 	
 	@FindBy(id="callPg")
@@ -54,14 +54,11 @@ public class HomePage extends WebDriverUtility {
 		return logoutbtn;
 	}
 	
-	public void menuDropDown(WebDriver driver) throws Throwable {
-		waitForElementToBeVisible(driver, profilemenudropdown);
-		profilemenudropdown.click();
-	}
-	public void logoutButton() {
-		logoutbtn.click();
-	}
-	public void chat() {
+	
+	
+	public void chat(WebDriver driver) {
+		waitForPageToLoad(driver);
+		waitForElementToBeClickable(chatbutton, driver);
 		chatbutton.click();
 	}
 	public void call() {
@@ -73,8 +70,13 @@ public class HomePage extends WebDriverUtility {
 	public void wallet() {
 		walletbutton.click();
 	}
-	
-	
+	public void menuDropDown(WebDriver driver) throws Throwable {
+		waitForElementToBeVisible(driver, profilemenudropdown);
+		profilemenudropdown.click();
+	}
+	public void logoutButton() {
+		logoutbtn.click();
+	}
 	
 
 }

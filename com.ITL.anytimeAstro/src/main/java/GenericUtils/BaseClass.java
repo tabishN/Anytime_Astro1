@@ -62,6 +62,15 @@ public class BaseClass {
 		//Login to Application
 		LoginPage loginpage = new LoginPage(driver);
 		loginpage.signin();
+		String USERNAME = pLib.readDataFromPropertyFile("username");
+		//logger.info("Entered username");
+		String PASSWORD = pLib.readDataFromPropertyFile("password");
+		//logger.info("Entered password");
+		
+	
+		
+		loginpage.loginEmail(driver);
+		loginpage.login(USERNAME, PASSWORD);
 		
 	}
 
